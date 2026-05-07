@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://user-backend-vorg.onrender.com/api/users'
+  baseURL: `${import.meta.env.VITE_API_URL}/api/users`
 });
 
 API.interceptors.request.use((req) => {
